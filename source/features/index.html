@@ -1,0 +1,308 @@
+---
+layout: default
+title: Features
+suppress_header: true
+extra_css:
+  - features.css
+  - magnific-popup.css
+extra_js:
+  - feature_page.js
+feature_blocks:
+
+- title: Extended authentication and authorization integration
+  features:
+  - description: LDAP user authentication (also compatible with Active Directory)
+    link: http://doc.gitlab.com/ee/integration/ldap.html#gitlab-ldap-integration
+    in_ce: true
+  - description: Multiple LDAP server support (also compatible with Active Directory)
+    link: http://doc.gitlab.com/ee/integration/ldap.html#integrate-gitlab-with-more-than-one-ldap-server-enterprise-edition
+    in_ce: false
+  - description: LDAP group synchronization (also compatible with Active Directory)
+    link: http://doc.gitlab.com/ee/integration/ldap.html#ldap-group-synchronization-gitlab-enterprise-edition
+  - description: Create and remove admins based on an LDAP group
+    link: http://doc.gitlab.com/ee/integration/ldap.html#enabling-the-admin-group-feature
+  - description: Kerberos user authentication
+    link: http://doc.gitlab.com/ee/integration/kerberos.html
+  - description: Audit log and events
+    link: http://doc.gitlab.com/ee/administration/audit_events.html
+  - description: Two-factor Authentication
+    link: http://doc.gitlab.com/ce/profile/two_factor_authentication.html
+    in_ce: true
+  - description: Two-factor Authentication with LDAP
+    link: http://doc.gitlab.com/ee/profile/two_factor_authentication.html
+  - description: Integrate with Atlassian Crowd
+    link: http://doc.gitlab.com/ce/integration/crowd.html
+
+- title: Fine-grained workflow management
+  features:
+  - description: Groups consisting of multiple people with a shared namespace for projects
+    link: http://doc.gitlab.com/ce/workflow/groups.html
+    in_ce: true
+  - description: Ability to fork a repository
+    in_ce: true
+  - description: Share a project with other groups
+    link: http://doc.gitlab.com/ee/workflow/share_projects_with_other_groups.html
+  - description: Manage large binaries with git annex
+    link: http://doc.gitlab.com/ee/workflow/git_annex.html
+  - description: Rebase merge requests before merge
+    link: http://doc.gitlab.com/ee/workflow/rebase_before_merge.html
+  - description: Git hooks (commit message must mention an issue, no tag deletion, etc.)
+    link: http://doc.gitlab.com/ee/git_hooks/git_hooks.html
+  - description: Lock project membership to the members of a group
+    link: http://doc.gitlab.com/ee/workflow/groups.html
+  - description: Approve Merge Requests
+    link: http://doc.gitlab.com/ee/workflow/merge_request_approvals.html
+  - description: Mirror External Repositories
+    link: http://doc.gitlab.com/ee/workflow/repository_mirroring.html
+
+- title: Additional server management options
+  features:
+  - description: Branded Login Page
+    link: http://doc.gitlab.com/ee/customization/branded_login_page.html
+  - description: An admin can email all users of a project, a group or the entire server
+    email: http://doc.gitlab.com/ee/tools/email.html
+  - description: Omnibus package supports log forwarding
+    link: https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md#udp-log-shipping-gitlab-enterprise-edition-only
+  - description: Project importing from GitHub to GitLab
+    link: http://doc.gitlab.com/ce/workflow/importing/import_projects_from_github.html
+    in_ce: true
+  - description: Project importing from GitHub Enterprise to GitLab
+    link: http://doc.gitlab.com/ce/workflow/importing/import_projects_from_github.html
+  - description: Project importing from GitLab.com to your private GitLab instance
+    link: http://doc.gitlab.com/ce/workflow/importing/import_projects_from_gitlab_com.html
+
+- title: Deeper integration with your tool stack
+  features:
+  - description: Mention JIRA ticket from GitLab
+    link: http://doc.gitlab.com/ce/integration/external-issue-tracker.html
+    in_ce: true
+  - description: Reference JIRA issues with GitLab commits, merge requests and issues
+    link: http://doc.gitlab.com/ee/integration/jira.html
+  - description: Close JIRA issues with GitLab commits
+    link: http://doc.gitlab.com/ee/integration/jira.html
+  - description: Display merge request status for builds on Jenkins CI
+    link: http://doc.gitlab.com/ee/integration/jenkins.html
+  - description: Omnibus package supports configuring an external PostgreSQL database
+    link: https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md#using-a-non-packaged-postgresql-database-management-server
+    in_ce: true
+  - description: Omnibus package supports configuring an external MySQL database
+    link: https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md#using-a-mysql-database-management-server-enterprise-edition-only
+
+---
+
+<div class="wrapper">
+
+  <nav class="navbar navbar-default qnav hidden-xs qnav2" role="navigation" id="qnav">
+    <div class="container-fluid featurenav">
+      <ul class="nav nav-pills nav-justified">
+        <li><a href="#community" onClick="_gaq.push(['_trackEvent', 'Features', 'sticky nav', 'Community Edition']);">Community Edition</a></li>
+        <li><a href="#enterprise" onClick="_gaq.push(['_trackEvent', 'Features', 'sticky nav', 'Enterprise Edition']);">Enterprise Edition</a></li>
+        <li><a href="#compare" onClick="_gaq.push(['_trackEvent', 'Features', 'sticky nav', 'Compare']);">Compare</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wide-feature head" id="community">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 head-non-bg">
+          <div class="title">GitLab <br> <b>Community edition</b></div>
+          <div class="header-text">
+            <uL>
+              <li><b>Feature rich</b>: Git repository management, code reviews, issue tracking, activity feeds and wikis. It comes with <a href="/gitlab-ci/">GitLab CI</a> for continuous integration and delivery.</li>
+              <li><b>Open Source</b>: MIT licensed, community driven, 700+ contributors, inspect and modify the source, easy to integrate into your infrastructure</li>
+              <li><b>Scalable</b>: support 25,000 users on one server or a highly available active/active cluster</li>
+            </ul>
+            <div class="actions">
+              <a href="/downloads" class="btn btn-default btn-lg" onClick="_gaq.push(['_trackEvent', 'Features', 'GitLab CE Header', 'Download']);">Download</a>
+              <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master#README" class="btn btn-default btn-lg" onClick="_gaq.push(['_trackEvent', 'Features', 'GitLab CE Header', 'Source + Readme']);">Source + Readme</a>
+            </div>
+            <br>
+            If you want to use GitLab without installing it,
+            check out <a href="/gitlab-com">GitLab.com</a>
+            Note that only self-hosted GitLab will let you integrate with your LDAP.
+          </div>
+
+        </div>
+
+        <div class="col-md-4 head-bg hidden-sm hidden-xs">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row feature-row">
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          ACTIVITY <b>STREAM</b>
+        </div>
+        <a href="/images/feature_page/activity_stream_full.png" class="image-link"><img src="/images/feature_page/activity_stream_full.png" class="img-responsive" alt="" /></a>
+        <div class="link">
+          <a href="https://gitlab.com/gitlab-org/gitlab-ce/activity">Have a look at an actual activity page</a>
+        </div>
+      </div>
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          FILE <b>BROWSER</b>
+        </div>
+        <a href="/images/feature_page/file_browser_full.png" class="image-link"><img src="/images/feature_page/file_browser_full.png" class="img-responsive" alt="" /></a>
+        <div class="link">
+          <a href="https://gitlab.com/gitlab-org/gitlab-ce/tree/master">Try navigating GitLab's code</a>
+        </div>
+      </div>
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          GIT POWERED <b>WIKI</b>
+        </div>
+        <a href="/images/feature_page/wiki_full.png" class="image-link"><img src="/images/feature_page/wiki_full.png" class="img-responsive" alt="" /></a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="wide-feature mr">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="name">
+          powerful <b>code review</b>
+        </div>
+
+        <div class="description">
+          Merge requests with line-by-line comments, CI and issue tracker integrations and much more..
+        </div>
+      </div>
+      <div class="wide-img">
+        <a href="/images/feature_page/mr.png" class="image-link"><img src="/images/feature_page/mr_sh.png" alt="" class="img-responsive"/></a>
+      </div>
+      <div class="wide-feature-link">
+        <a class="btn-default" href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests">See the power of merge requests on GitLab.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="row feature-row">
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          ISSUE <b>MANAGEMENT</b>
+        </div>
+        <a href="/images/feature_page/issue_management.png" class="image-link"><img src="/images/feature_page/issue_management.png" class="img-responsive" alt="" /></a>
+        <div class="link">
+          <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues">See how we use issues to manage our open source project</a>
+        </div>
+      </div>
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          CODE <b>SNIPPETS</b>
+        </div>
+        <a href="/images/feature_page/snippets_full.png" class="image-link"><img src="/images/feature_page/snippets_full.png" class="img-responsive" alt="" /></a>
+      </div>
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          WEB <b>HOOKS</b>
+        </div>
+        <a href="/images/feature_page/webhooks_full.png" class="image-link"><img src="/images/feature_page/webhooks_full.png" class="img-responsive" alt="" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wide-feature head ee" id="enterprise">
+    <div class="container">
+      <div class="name">
+        gitlab <b>enterprise edition</b>
+      </div>
+
+      <div class="description">
+        GitLab Enterprise Edition builds on top of the Community Edition and includes extra features mainly aimed at organizations with more than 100 users.
+        It has LDAP group sync, audit logs and multiple roles.
+        It includes deeper authentication and authorization integration, has fine-grained workflow management, has extra server management options and it integrates with your tool stack.
+        GitLab EE runs on your servers, for our SaaS offering please see <a href="/gitlab-com">GitLab.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row feature-row">
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          GIT <b>HOOKS</b>
+        </div>
+        <a href="/images/feature_page/githooks_full.png" class="image-link"><img src="/images/feature_page/githooks_full.png" class="img-responsive" alt="" /></a>
+      </div>
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          LDAP <b> GROUP SYNC</b>
+        </div>
+        <a href="/images/feature_page/ldap_groups_full.png" class="image-link"><img src="/images/feature_page/ldap_groups_full.png" class="img-responsive" alt="" /></a>
+      </div>
+      <div class="col-md-4 small-feature">
+        <div class="name">
+          BRANDED <b>LOGIN PAGE</b>
+        </div>
+        <a href="/images/feature_page/branded_login_full.png" class="image-link"><img src="/images/feature_page/branded_login_full.png" class="img-responsive" alt="" /></a>
+        <div class="link">
+          <a href="https://gitlab.com/users/sign_in">See the login page from GitLab.com ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wide-feature head community" id="compare">
+    <div class="container">
+      <div class="name">
+        compare gitlab versions
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="compare">
+
+      {% for feature_block in page.feature_blocks %}
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h2 class="panel-title">{{ feature_block.title }}</h2>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Community Edition</th>
+                <th><b>Enterprise Edition</b></th>
+              </tr>
+            </thead>
+            <tbody class="header first">
+              {% for feature in feature_block.features %}
+                <tr>
+                  <td><a href="{{ feature.link }}">{{ feature.description }}</a></td>
+                  <td>
+                    {% if feature.in_ce %}
+                      <i class="fa fa-check"></i>
+                    {% endif %}
+                  </td>
+
+                  <td><i class="fa fa-check"></i></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endfor %}
+
+      <div class="action">
+        <a href="/pricing/" onClick="_gaq.push(['_trackEvent', 'Features', 'Compare', 'Pricing (large bottom button)']);" class="btn btn-default btn-lg"><b>See Pricing Options</b></a>
+      </div>
+
+      <div class="action">
+        <a href="/direction/" style="font-size: 22px;">View the direction of development and upcoming features</a>
+      </div>
+    </div>
+  </div>
+</div>
